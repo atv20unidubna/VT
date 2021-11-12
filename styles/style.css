@@ -1,0 +1,18 @@
+.nav-flex{
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    /* background-color: black; */
+    
+}
+nav
+{
+    margin: 5px auto 10px;
+    background-color: #ffffff;
+    font-family: 'Lucida Sans';
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+} 
