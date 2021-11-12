@@ -1,0 +1,270 @@
+
+.backgr_is_black{
+    background-color: #000000;
+    color: #ffffff;
+}
+.backgr_is_white{
+    background-color: #ffffff;
+    color: #000000;
+}
+footer
+{
+    background-color: #000000;
+    color:#ffffff;
+    text-align: center;
+}
+nav
+{
+    margin: 5px auto 10px;
+    background-color: #000000;
+    font-family: 'Lucida Sans';
+    font-size: 20px;
+    color: white;
+} 
+   li#thisli {
+    list-style-type: none; /* Убираем маркеры у списка */
+    }
+   li#thisli:before {
+    content: "| "; /* Добавляем в качестве маркера символ */
+    }
+    li#secondli{
+        list-style-type: none; /* Убираем маркеры у списка мои компетенции*/
+    }
+
+h2, h1{
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+    letter-spacing: 10px;
+    position: relative;
+    color: #000000;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    background-color: #000000;
+  }
+div main{
+    text-align: center;
+}
+main{
+    background-color: #ffffff;
+}
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+    padding:1rem 1rem 1rem 1rem;
+}
+.wrapper1{
+    max-width: 1000px;
+    /* margin: 0 auto; */
+    height: 100%;
+    /* Сверху | Справа | Снизу | Слева */
+padding: 11em 1em 0 4em;
+}
+.wrapper2{
+    max-width: 1000px;
+    /* margin: 0 auto; */
+    height: 100%;
+    /* Сверху | Справа | Снизу | Слева */
+padding: 17em 1em 0 1em;
+color: #000;
+}
+.wrapper3{
+    max-width: 1000px;
+    /* margin: 0 auto; */
+    height: 100%;
+    /* Сверху | Справа | Снизу | Слева */
+padding: 2em 0 0 0;
+font-size: 30px;
+color: #000;
+}
+.wrapper4{
+    
+    margin: 0 auto;
+    height: 100%;
+    /* Сверху | Справа | Снизу | Слева */
+    padding: 2em 0 2em 0;
+    color: #000;
+}
+.wrapper5{
+    
+    margin: 0 auto;
+    height: 100%;
+    /* Сверху | Справа | Снизу | Слева */
+    padding: 2em 0 15em 0;
+    color: #000;
+}
+.fig {
+    text-align: right; /* Выравнивание по центру */
+   }
+
+table {
+    
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+    }
+    th, td:first-child {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    }
+    th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: rgb(0, 0, 0);
+    }
+    td {
+    background: #ffffff;
+    }
+    th:first-child, td:first-child {
+    text-align: left;
+    }
+
+    img{
+        margin: 10px auto 20px;
+        display: block;
+    }
+
+   .photo_left{
+    float: left;
+   }
+
+    .right{
+    float: right;
+    }
+    .nav-flex{
+
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        /* position: fixed; */
+        /* background-color: black; */
+        
+    }
+   
+    .li-logo
+    {
+        flex-basis: 30%;
+    }
+    .item_center{
+        align-items: center;
+    }
+
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  /* при наведении */
+a.text {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+div#tekst_sverhu_kartinki {
+    position: relative;
+    }
+    .tekst_sverhu_kartinki_1 {
+    position: absolute;
+    bottom: 10%;
+    text-transform: uppercase;
+    /* width: 300px; */
+    text-align: right;
+    }
+    .tekst_sverhu_kartinki_1 span {
+    background: transparent;
+    padding: 20px;
+    }
+    span#toptext{
+        text-shadow: 1px 1px 1px #000;
+        font-family: fantasy;
+        font: bold 90px/70px 'Bradley Hand';
+        padding: 2rem 0rem 2rem 22rem;
+        color:rgb(255, 255, 255);
+        letter-spacing: 3px;
+       
+    }
+    span#bottomtext{
+        text-shadow: 1px 1px 1px #000;
+        font: bold 60px/40px 'Bradley Hand';
+        
+        padding: 50px;
+        
+        color:rgb(255, 255, 255);
+
+    }
+    img#bckgheader{
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    span#headerbold{
+        color:rgb(0, 0, 0);
+        font-size: 45px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        /* padding-bottom: 10px; */
+    }
+
+    .gridcontainer1{
+        display:grid;
+        grid-auto-rows: 100px 100px 100px 100px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "d1 d1 d2 d2"; height: 70vh;
+    }
+    .gridcontainer2{
+        display:grid;
+        grid-auto-rows: 366px 366px 366px 366px;
+        grid-template-columns: 366px 366px 366px 366px;
+        grid-template-areas: 
+        "d1 d2 d3 d4 d5"; height: 25vh;
+        justify-items: center;
+    }
+    
+    .gridcontainer3{
+        display:grid;
+        grid-auto-rows: 366px 366px 366px 366px;
+        grid-template-columns: 366px 366px 366px 366px
+        "d1 d1 d2 d2"; height: 25vh;
+        justify-items: center;
+    }
+
+    .d1{
+        grid-area: d1;
+    }
+    .d2{
+        grid-area: d2;
+    }
+    .d3{
+        grid-area: d3;
+    }
+    .d4{
+        grid-area: d4;
+    }
+    .d5{
+        grid-area: d5;
+    }
+    img#pic1{
+       width: 250px;
+       height: 180px;
+    }
+    button#thisb {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        position: relative;
+        border: 1px solid white;
+        padding: 0 1rem;
+    }
+    div#thisdiv{
+        background-color: #ffffff;
+        color: black;
+    }
