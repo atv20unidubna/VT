@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body class = "backgr_is_black">
     <nav id="top">
@@ -63,9 +64,26 @@
 
         </ul>
             </nav>
+    
 
+        <div><textarea name="" id="myTextarea0" cols="30" rows="3"></textarea><label>onchange</label></div>
+        <div><textarea name="" id="myTextarea1" cols="30" rows="3"></textarea><label>keypress</label></div>
+        <div><textarea name="" id="myTextarea2" cols="30" rows="3"></textarea><label>oninput</label></div>
+        <div><button>Click</button></div>
 
-        
+    <script>
+        document.getElementById('myTextarea0').onchange=function(){
+            // alert(myTextarea0.value);
+            localStorage.setItem('savetext', document.getElementById('myTextarea0').value);
+            alert(localStorage.getItem('savetext'));
+        }
+        document.getElementById('myTextarea1').onkeypress=function(){
+        alert('Youve keypressed');
+        }
+        document.getElementById('myTextarea2').oninput=function(){
+        alert('Youve oninputed');
+        }
+    </script>
       
   </main>
 </body>
