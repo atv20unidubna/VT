@@ -311,7 +311,7 @@ div#tekst_sverhu_kartinki {
         } */
     .divborder{
     width: 260px; height: 650px;
-    box-shadow: 0 0 10px 2px #ff6f00;
+    box-shadow: 0 0 10px 2px #000000;
     margin-bottom: 10px;
     padding: 40px;
     border-radius: 70px;
@@ -319,8 +319,8 @@ div#tekst_sverhu_kartinki {
     .divborder_tb{
     border-style:inset;/*outset, или groove, или ridge*/
     border-width:1px;
-    box-shadow: 0 0 1px 1px #ff6f00;
-    border-color: rgb(255, 166, 0);
+    box-shadow: 0 0 1px 1px #000000;
+    border-color: rgb(0, 0, 0);
     border-radius: 5px;
     background-color: #ffdabe;
     }
