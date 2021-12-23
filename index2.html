@@ -5,23 +5,122 @@
     <meta charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Project</title>
+   
+   <script> //для текста
+        function fbtt()
+        { 
+            document.getElementById("btt").classList.add("wrappertext");
+        }
+        function f1()
+        { 
+            document.getElementById("btt").classList.remove("wrappertext");
+        }
+
+        function f2()
+        { 
+            document.getElementById("btt").classList.toggle("wrappertext");
+        }
+        function f_remove_element()
+        { 
+            event.currentTarget.style.display="none";
+        }
+    </script>
+    <script>
+        function f()
+        {
+           let index = document.formname.question.selectedIndex;
+           let question_en = document.formname.question[index].value;
+           let question_ru = document.formname.question[index].text;
+           let name = document.formname.yourname.value;
+           let phone = document.formname.yourphone.value;
+           let email = document.formname.yourmail.value;
+           let _text;
+           let theme = document.formname.theme.value;
     
+            for(i = 0;i < document.formname.meth.length; i++){
+                if(document.formname.meth[i].checked){
+                    method = document.formname.meth[i].value;
+                }
+            } 
+    
+                let mailing_console = false;
+                let mailing = document.formname.mailing.checked;
+                if(document.formname.mailing.checked){mailing = document.formname.mailing.value}
+                if(document.formname.mailing.checked){mailing_answer_for_alert = " Вы были подписаны на рассылку. "} else {mailing_answer_for_alert = " Вы не были подписаны на рассылку. Будем рады встретить вас в нашем офисе. "}
+    
+                if(document.formname.chb1.checked){
+                    _text+= " " + document.formname.chb1.text + " ";
+                }
+                if(document.formname.chb2.checked){
+                    _text+= " " + document.formname.chb2.text + " ";
+                }
+                if(document.formname.chb3.checked){
+                    _text+= " " + document.formname.chb3.text + " ";
+                }
+                let using_rb;
+                for(i = 0;i < document.formname.meth.length; i++){
+                if(document.formname.meth[i].checked){
+                    using_rb = document.formname.meth[i].value;
+                }
+            } 
+    
+           console.log("Данные из переключателей: "  + method);     
+           console.log("Рассылка: " + mailing_console);
+           console.log("Данные из полей " +  name + " "+ phone + " " + email);
+           console.log("Данные из выпадающего списка " +  index + " "+ question_en + " " + question_ru);
+           console.log("Данные по вопросам " + _text);
+           console.log("Вопрос: " + theme);
+        //    <textarea name="unput" cols="33" rows="2"></textarea>
+        //    document.formname.input.innerText("Уважаемый " + name + ", ваш номер " + phone + " и ваша почта " + email + " были приняты!" + mailing_answer_for_alert + " В графе Тема вопроса вы выбрали " + '"' + question_ru + '"' + ". А ваш конкретный вопрос был: " + '"' + theme + '"' + ". Вы желаете получить ответ: " + using_rb + ".");
+        //    document.getElementById()
+        }    
+            
+            function f_change_class1(){
+                
+                //  document.formname.r1.classList.add('hidden');
+                for(i = 0;i < document.formname.meth.length; i++)
+                {
+                 if(document.formname.meth[i].checked){document.getElementById("r1").classList.add("hidden");}
+                 else{document.getElementById("r1").classList.remove("visible");}
+                }
+            }
+            function f_change_class2(){
+                
+                //  document.formname.r1.classList.add('hidden');
+                for(i = 0;i < document.formname.meth.length; i++)
+                {
+                 if(document.formname.meth[i].checked){document.getElementById("r2").classList.remove("visible");}
+                 else{document.getElementById("r2").classList.add("hidden");}
+                }
+            }
+            function f_change_class3(){
+                
+                //  document.formname.r1.classList.add('hidden');
+                
+                for(i = 0;i < document.formname.meth.length; i++)
+                {
+                 if(document.formname.meth[i].checked){document.getElementById("r3").classList.remove("visible");}
+                 else{document.getElementById("r3").classList.add("hidden");}
+                }
+            }
+    // блок скрипт для формы
+    </script>
+<script> // для кнопок чер/бел 
+ document.getElementById("btt").onclick=fbtt();
+ document.getElementById("btt").setAttribute("class", "wrapper1text");
+</script>
 </head>
-<body class = "backgr_is_black">
+<body class = "backgr_is_black1">
     <nav id="top">
         <ul class = "nav-flex backgr_is_black">
         <!-- <li id="thisli"> -->
 
-            <a href="index.html" class="text"> 
+            <a href="" class="text"> 
         
                 <img src="images/logo2.PNG" alt="Логотип">
         
             </a>
-        
-        
-        <!-- </li> -->
-        
         <li id="thisli">
         
             <a href="index.html" class="text">
@@ -29,9 +128,6 @@
             О себе
         </a>
         </li>
-        
-        
-        
         <li id="thisli">
         
             <a href="pages/resume.html" class="text">
@@ -39,7 +135,6 @@
             Резюме
         </a>
         </li>
-        
         <li id="thisli">
         
             <a href="pages/portpholio.html" class="text">
@@ -47,7 +142,6 @@
             Портфолио
         </a>
         </li>
-        
         <li id="thisli">
         
             <a href="pages/contacts.html" class="text">
@@ -55,48 +149,197 @@
             Контакты
         </a>
         </li>
-
         <li id="thisli">
             <a href="index2.html" class="text">
            Задание JS
         </a>
         </li>
-
         </ul>
-            </nav>
-    
+</nav>
+<h2 class="backgr_is_black">Задание JS</h2>
 
-        <div><textarea name="" id="myTextarea0" cols="30" rows="3"></textarea><label>onchange</label></div>
-        <div><textarea name="" id="myTextarea1" cols="30" rows="3"></textarea><label>keypress</label></div>
-        <div><textarea name="" id="myTextarea2" cols="30" rows="3"></textarea><label>oninput</label></div>
+    <main id="ind2m" class="wrapperform">
+        <div class="wrapper_line brd" id="container">
+        <div class="item padding_center">
+          
+        <div><textarea name="" id="myTextarepic" cols="30" rows="3"></textarea><label>onchange</label></div>
+        <!-- <div><textarea name="" id="myTextarea1" cols="30" rows="3"></textarea><label>keypress</label></div>
+        <div><textarea name="" id="myTextarea2" cols="30" rows="3"></textarea><label>oninput</label></div> -->
         <div><button>Click</button></div>
 
-    <script>
-        document.getElementById('myTextarea0').onchange=function(){
-            // alert(myTextarea0.value);
-            localStorage.setItem('savetext', document.getElementById('myTextarea0').value);
+        <script>
+            document.getElementById('myTextarepic').onchange=function(){
+                localStorage.setItem('savetext', document.getElementById('myTextarepic').value);
+            }
+            document.getElementById('myTextarepic').value = localStorage.getItem('savetext');
+        </script>
+       
+      </div></div>
+      <div class="backgr_is_black wrapper"></div>
+    <!-- конец -->
+      <div class="item wrapper_line">
+        
+            <div class="divborder wrapper">
+                <form action="javascript:f()" name="formname">
+        <div>Как вам удобно получить ответ:
+           
+        <p><input type="radio" value="По телефону" name="meth" onClick="f_change_class1()"> По телефону</p>
+        <p><input  type="radio" value="Письмом"name="meth" onClick="f_change_class2()"> Письмом</p>
+        <p><input type="radio" value="Не нужно отвечать" checked name="meth" onClick="f_change_class3()"> Не нужно отвечать</p>
+        </div>
+            <div>Укажите тему вопроса:</div>
+                <select class="divborder_tb" name="question">
+                <option value="work">работа</option>
+                <option value="not work">не работа</option>
+                <option value="what's the question">Что такое вопрос?</option>
+                <option value="question has no sense">Вопросы тщетны</option>
+            </select>
+        <div class="wrapper3form">
+            <label for="mailing" >Подписаться на рассылку
+            <input type="checkbox" id="mailing" name="mailing" value="mailing_true" checked></label> <br></div>
+        <div>
+            <div class ="visible wrapper3form" id="r1"><span>Ваше имя:</span><textarea name="yourname" cols="33" rows="1"></textarea></p></div>
+            <div class ="hidden wrapper4form" id="r2"><span>Ваш номер телефона:</span><textarea name="yourphone" cols="33" rows="1" placeholder="+7 (xxx) xx xx"></textarea></p></div>
+            <div class ="hidden wrapper4form" id="r3"><span>Ваша почта:</span><textarea name="yourmail" cols="33" rows="1" placeholder="mail@mail.com"></textarea></p></div>
+            <div class="wrapper4form"> Тема вопроса
+            <div>
+            <label for="chb1">
+            <input type="checkbox" name="chb1" id="chb1" value="probably">может так
+            </label><br>
+            <label for="chb2">
+            <input type="checkbox" name="chb2" id="chb2" value="or not">или не так
+            </label><br>
+            <label for="chb2">
+            <input type="checkbox" name="chb3" id="chb3" value="other">иначе
+            </label><br>
+            </div></div></div>
+    <div class="wrapper3form">Ваш вопрос: </div>
+    <textarea name="theme" cols="33" rows="2"></textarea></p>
+      <div><input type="submit" value="Отправить вопрос" class="divborder_tb">
+      </div>
+
+       </div> </div></div>
+       <div class="backgr_is_black wrapper"></div>
+       <!-- конец задания -->
+
+ <div class="item wrapper brd">
+
+        <div id="test"></div>
+
+        <div id="bttn3"></div>
+        <div class="padding_center1">
+    <button onclick="fbtt()">Dark</button>
+    <button onclick="f1()">Light</button>
+    <button onclick="f_remove_element()">Remove btn</button>
+    </button>
+     <div id="btt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Repellendus quam in tempora quidem architecto dignissimos dolor sed ab<br> veniam itaque facilis qui possimus, aperiam vel, saepe eos.<br> Ullam, architecto. Praesentium.</div>
+    </div>
+   
+</div>
+ <div class="backgr_is_black wrapper"></div>
+     <div class="item wrapper brd"> <!--начало задания с созданием полей и диаграммой -->
+        <script>
+    
+            function add_textarea(){
+                let array_ta = [];
+                let count = document.getElementById('count').value;
+                    // array_ta.length = count;
+                    // let a = array_ta.length;
+                for(i = 0; i < count; i++){
+                    let tf = document.createElement('input');
+                    tf.type="text";
+                    tf.className="textareastyle";
+                    // tf.setAttribute('cols', 5);
+                    // tf.setAttribute('rows', 3);
+                    array_ta.push(tf);
+                    document.getElementById("textFields").appendChild(tf);
+                    }
+                }
+    
+        
+        </script>
+         <div class="padding_center1">
+            <textarea name="" id="count" cols="30" rows="1"></textarea> <button onclick="add_textarea()">Click to create</button>
+    
+                <div id="textFields"> 
+                    
+                </div>
+                <canvas id="paint" width="200" height="200" style="border: 1px solid black;">
+    
+            <script>
+            let art = document.getElementById("paint");
+            let graphics = art.getContext("2d");
+            graphics.fillStyle = "#000000";
+            graphics.fillRect(10, 10, 50, 50);
+            </script>
+        </div>
+    
+        
+<!-- конец задания -->
+    </div>
+<div class="backgr_is_black wrapper"></div>
+     <div class="item brd"> <!--задание с галереей -->
+        <div>
+            <img src="images/enisej.jpg" width="400" height="300" alt="" >
+            </div>
+            <div class="flex2 padding_center2">
+            <img src="images/enisey.jpg" class="img_cool" alt="" onclick="f_gallery(1)">
+            <img src="images/Lena.jpg" class="img_cool" onclick="f_gallery(2)">
+            <img src="images/river.jpg" class="img_cool" alt="" onclick="f_gallery(3)">
+            </div>
+            <div class="padding_center4">
+        <button onclick="f1_gal()">Click!</button>
+        <button onclick="stop()">Stop!</button>
+            </div>
+<script>
+    id = null;
+    a=2;
+     function f1_gal()
+    {
+        document.images[1].src = document.images[a].src;
+        document.images[a].classList.toggle("borderblack");
+        if(a!=2){
+            document.images[a-1].classList.toggle("borderblack");
         }
-        document.getElementById('myTextarea0').value = localStorage.getItem('savetext');
-        // document.getElementById('myTextarea1').onkeypress=function(){
-        // alert('Youve keypressed');
-        // }
-        // document.getElementById('myTextarea2').oninput=function(){
-        // alert('Youve oninputed');
-        // }
-    </script>
-      
+        else{
+            if(document.images[4].classList.contains("borderblack")){
+            document.images[4].classList.toggle("borderblack");
+            }
+        }
+        if(a==4){
+            a=1;
+        }
+        a=a+1;
+        id = setTimeout("f1_gal()", 1000);
+    } function stop()
+    {
+        clearTimeout(id);   
+    }
+</script>
+</div>
+<!-- конец галереи -->
+<div class="wrapper_line"></div>
+<div class="item brd">
+    <div class="padding_center">
+    <span class="nocopy">
+        Улица опрокинулась, <br>
+        течет по-своему…<br>
+        Подошел и вижу —<br>
+        за каплищей каплища<br>
+        по морде катится,<br>
+        прячется в ше́рсти…</span>
+  </div>  
+</div>
+</div>
   </main>
 </body>
-    <footer>
 
-                <div class = "wrapper">
-                    Сайт разработан Афанасьевой Татьяной, Copyright 2021
-                </div>
-                <div>
-            
-            
-                    <img src="images/footer_last.jpg" alt="" width = 100>
-                </div>
-            
-                </footer>
+<footer>
+    <div class = "wrapper">
+    Сайт разработан Афанасьевой Татьяной, Copyright 2021
+    </div>
+    <div>    
+    <img src="images/footer_last.jpg" alt="" width = 100>
+    </div></div>
+    </footer>
 </html>
